@@ -139,7 +139,8 @@ CART_SESSION_ID = 'cart'
 
 INTERNAL_IPS = [
     "127.0.0.1",
-    "localhost"
+    "localhost",
+    "0.0.0.0",
 ]
 
 # Heroku Settings
