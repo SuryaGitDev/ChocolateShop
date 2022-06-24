@@ -140,6 +140,11 @@ ul.errorlist {
 #subheader .cart {
     float:right;
     padding-top:4px;
+    color: #FFFFFF;
+}
+
+#subheader .cart a {
+    color: #FFFFFF;
 }
 
 #content {
@@ -166,6 +171,7 @@ ul.errorlist {
 
 #sidebar ul li a {
     display:block;
+    color:#2F3F53;
 }
 
 #sidebar ul li.selected {
