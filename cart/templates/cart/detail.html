@@ -7,7 +7,15 @@
     <script>
         $(document).ready(function () {
             console.log( "ready!" );
-            $('#cart_table').DataTable();
+            $('#cart_table').DataTable({
+                    "paging": true,
+                    "searching": true,
+                    "autoWidth": true,
+                    "ordering": true,
+                    "iDisplayLength": 50,
+                    order: [[1, 'asc']],
+                }
+            );
         });
     </script>
     <h1>Your shopping cart</h1>
@@ -48,8 +56,8 @@
                             {% csrf_token %}
                         </form>
                     </td>
-                    <td class="num">${{ item.price }}</td>
-                    <td class="num">${{ item.total_price }}</td>
+                    <td class="num" style="text-align:left">${{ item.price }}</td>
+                    <td class="num" style="text-align:left">${{ item.total_price }}</td>
                 </tr>
             {% endwith %}
         {% endfor %}
