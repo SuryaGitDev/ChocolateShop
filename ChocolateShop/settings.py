@@ -145,6 +145,8 @@ INTERNAL_IPS = [
     "127.0.0.1",
     "localhost",
     "0.0.0.0",
+    "54.159.116.102",
+    "chocostop.herokuapp.com"
 ]
 
 # Heroku Settings
