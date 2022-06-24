@@ -1,0 +1,1 @@
+web: gunicorn ChocolateShop.wsgi --log-file -
