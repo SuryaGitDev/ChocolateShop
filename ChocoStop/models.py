@@ -36,9 +36,11 @@ class Product(models.Model):
         return reverse('ChocoStop:product_detail',
                        args=[self.id, self.slug])
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         ordering = ('name',)
         index_together = (('id', 'slug'),)
 
-        def __str__(self):
-            return self.name
+
