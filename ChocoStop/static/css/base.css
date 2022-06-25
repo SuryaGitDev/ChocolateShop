@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5 , h6 {
 /*    border:0;*/
 /*}*/
 
+a.button {
+    padding:10px 20px;
+}
+
 /*a.button.light {*/
 /*    color:#666;*/
 /*    background:#ededed;*/
@@ -37,9 +41,9 @@ h1, h2, h3, h4, h5 , h6 {
 /*    text-align:left;*/
 /*}*/
 
-/*.text-right {*/
-/*    text-align:right;*/
-/*}*/
+.text-right {
+    text-align:right;
+}
 
 table {
     width:100%;
