@@ -10,36 +10,36 @@ h1, h2, h3, h4, h5 , h6 {
     font-family: 'Rancho', cursive; font-weight:normal;
 }
 
-a {
-    text-decoration:none;
-    color:#2F3F53;
-}
+/*a {*/
+/*    text-decoration:none;*/
+/*    color:#2F3F53;*/
+/*}*/
 
-a:hover {
-    color:#77b6e2;
-}
+/*a:hover {*/
+/*    color:#77b6e2;*/
+/*}*/
 
-a.button, input[type="submit"] {
-    color:#fff;
-    background:#7B3F00;
-    border-radius:4px;
-    padding:10px 20px;
-    font-size:14px;
-    border:0;
-}
+/*a.button, input[type="submit"] {*/
+/*    color:#fff;*/
+/*    background:#7B3F00;*/
+/*    border-radius:4px;*/
+/*    padding:10px 20px;*/
+/*    font-size:14px;*/
+/*    border:0;*/
+/*}*/
 
-a.button.light {
-    color:#666;
-    background:#ededed;
-}
+/*a.button.light {*/
+/*    color:#666;*/
+/*    background:#ededed;*/
+/*}*/
 
-.text-left {
-    text-align:left;
-}
+/*.text-left {*/
+/*    text-align:left;*/
+/*}*/
 
-.text-right {
-    text-align:right;
-}
+/*.text-right {*/
+/*    text-align:right;*/
+/*}*/
 
 table {
     width:100%;
@@ -85,35 +85,35 @@ td input[type="submit"] {
     padding:4px 10px;
 }
 
-form p label, form p input {
-    float:left;
-    clear:both;
-}
+/*form p label, form p input {*/
+/*    float:left;*/
+/*    clear:both;*/
+/*}*/
 
-form p label {
-    font-size:14px;
-    padding-bottom:4px;
-}
+/*form p label {*/
+/*    font-size:14px;*/
+/*    padding-bottom:4px;*/
+/*}*/
 
-form p input {
-    width:300px;
-    font-size:13px;
-    margin-bottom:10px;
-    padding:10px 12px;
-    border:0;
-    background:#efefef;
-    color:#666;
-    border-radius:4px;
-}
+/*form p input {*/
+/*    width:300px;*/
+/*    font-size:13px;*/
+/*    margin-bottom:10px;*/
+/*    padding:10px 12px;*/
+/*    border:0;*/
+/*    background:#efefef;*/
+/*    color:#666;*/
+/*    border-radius:4px;*/
+/*}*/
 
-ul.errorlist {
-   float:left;
-   color:#ff0000;
-   clear:both;
-   font-size:13px;
-   margin:0;
-   padding:0;
-}
+/*ul.errorlist {*/
+/*   float:left;*/
+/*   color:#ff0000;*/
+/*   clear:both;*/
+/*   font-size:13px;*/
+/*   margin:0;*/
+/*   padding:0;*/
+/*}*/
 
 
 #header {
