@@ -19,10 +19,10 @@ def order_create(request):
             # clear the cart
             cart.clear()
             return render(request,
-                          'orders/order/created.html',
+                          'orders/ordertemplates/created.html',
                           {'order': order})
     else:
         form = OrderCreateForm()
     return render(request,
-                  'orders/order/create.html',
+                  'orders/ordertemplates/create.html',
                   {'cart': cart, 'form': form})
