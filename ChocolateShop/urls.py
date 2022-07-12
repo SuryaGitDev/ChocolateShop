@@ -23,6 +23,8 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('cart/', include('cart.urls', namespace='cart')),
     path('orders/', include('orders.urls', namespace='orders')),
+    path('payment/', include('payment.urls', namespace='payment')),
+    path('coupons/', include('coupons.urls', namespace='coupons')),
     path('', include('ChocoStop.urls', namespace='ChocoStop')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
