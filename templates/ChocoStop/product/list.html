@@ -1,34 +1,40 @@
 {% extends "ChocoStop/base.html" %}
 {% load static %}
+
 {% block title %}
-    {% if category %}{{ category.name }}{% else %}Products{% endif %}
+{% if category %}{{ category.name }}{% else %}Products{% endif %}
 {% endblock %}
+
+{% block subheaders %}
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="{% url 'ChocoStop:product_list' %}">All</a></li>
+                {% for c in categories %}
+                <li class="nav-item"><a class="nav-link" href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>
+                {% endfor %}
+{% endblock %}
+
 {% block content %}
-    <div id="sidebar">
-        <h3>Categories</h3>
-        <ul>
-            <li {% if not category %}class="selected"{% endif %}>
-                <a href="{% url "ChocoStop:product_list" %}">All</a>
-            </li>
-            {% for c in categories %}
-                <li {% if category.slug == c.slug %}class="selected"{% endif %}>
-                    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div id="main" class="product-list">
-        <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
-        {% for product in products %}
-            <div class="item">
-                <a href="{{ product.get_absolute_url }}">
-                    <img class="img-thumbnail" src="{% if product.image.url %}{{ product.image.url }}{%else %}{% static "img/no_image.png" %}{% endif %}">
-                      <!--<img class="img-thumbnail" src="{{ product.image.url }}">-->
-                </a>
-                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-                <br>
-                ${{ product.price }}
+<!------------ Content -------------->
+<div class="container">
+<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+   {% for product in products %}
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top"
+                     src="{% if product.image.url %}{{ product.image.url }}{%else %}{% static 'img/no_image.png' %}{% endif %}"
+                     alt="..."/>
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <a class="fw-bolder" href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                        <br>
+                        ${{ product.price }}
+                    </div>
+                </div>
             </div>
+        </div>
         {% endfor %}
     </div>
+</div>
+
 {% endblock %}

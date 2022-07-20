@@ -1,0 +1,135 @@
+.product-detail {
+    text-align:justify;
+}
+
+.product-detail .price {
+    color:#333;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.product-detail img {
+    width:40%;
+    float:left;
+    padding:0 20px 20px 0;
+}
+
+.product-detail h1 {
+    margin-bottom:0;
+}
+
+.product-detail h2 {
+    margin-top:10px;
+}
+
+table.cart {
+    margin-bottom:40px;
+}
+
+table.cart img {
+    width:180px;
+}
+
+table th, table td {
+    text-align:left;
+    font-size:20px;
+    padding:10px;
+    margin:0;
+    vertical-align:middle;
+}
+
+tbody td.num {
+    text-align:right;
+}
+
+td input[type="submit"] {
+    font-size:15px;
+    padding:4px 10px;
+}
+
+#content {
+    padding:0 100px;
+    overflow:hidden;
+}
+.text-right {
+    text-align:right;
+}
+
+#mainHeader {
+    color:#000;
+    background:linear-gradient(90deg,#FEF2AD,#E9BF7A 20%,#C99752 40%);
+    padding:15px 100px;
+    overflow:auto;
+    font-family: 'Cormorant SC', serif;
+}
+
+a{
+    text-decoration:none;
+    color:#2F3F53;
+}
+
+a:hover {
+    color:#7B3F00;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+body{
+    font-family: 'Cormorant Upright', serif;
+    font-weight:500;
+    font-size:1.2rem;
+    }
+
+.order-info {
+    float:right;
+    width:300px;
+    background:#efefef;
+    padding:10px 20px;
+    color:#333;
+    border-bottom:4px solid #2F3F53;
+}
+
+.order-info h3 {
+    color:#2F3F53;
+}
+
+.order-info ul li {
+    margin:0;
+    padding:0;
+    font-size:17px;
+}
+
+.order-info p {
+    font-weight:bold;
+    float:right;
+}
+
+.order-info span {
+    float:right;
+}
+
+.order-form {
+    float:left;
+}
+
+.dropdown-toggle
+{
+white-space:normal;
+}
+
+/* braintree hosted fields */
+form div.field {
+    font-size:13px;
+    color:#666;
+    width:300px;
+    height:22px;
+    margin-bottom:10px;
+    padding:6px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+

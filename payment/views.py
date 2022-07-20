@@ -4,6 +4,8 @@ from django.conf import settings
 from orders.models import Order
 
 # instantiate Braintree payment gateway
+from orders.tasks import order_created
+
 gateway = braintree.BraintreeGateway(settings.BRAINTREE_CONF)
 
 def payment_process(request):
@@ -28,8 +30,10 @@ def payment_process(request):
             # store the unique transaction id
             order.braintree_id = result.transaction.id
             order.save()
+            order_created(order.id, True)
             return redirect('payment:done')
         else:
+            order_created(order.id, False)
             return redirect('payment:canceled')
     else:
         # generate token

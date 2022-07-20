@@ -29,7 +29,7 @@ def order_create(request):
             # clear the cart
             cart.clear()
             # launch asynchronous task
-            order_created(order.id)
+            # order_created(order.id)
             # return render(request,
             #             'orders/ordertemplates/created.html',
             #             {'order': order})
