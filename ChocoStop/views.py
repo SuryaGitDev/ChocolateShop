@@ -1,9 +1,11 @@
 # Create your views here.
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
+from cart.cart import Cart
 from cart.forms import CartAddProductForm
 from .models import Category, Product
+
 
 # @login_required
 def product_list(request, category_slug=None):
@@ -19,6 +21,7 @@ def product_list(request, category_slug=None):
                    'categories': categories,
                    'products': products})
 
+
 # @login_required
 def product_detail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
@@ -27,3 +30,19 @@ def product_detail(request, id, slug):
                   'ChocoStop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form})
+
+
+def product_add_to_cart(request, id):
+    category = None
+    categories = Category.objects.all()
+    product = get_object_or_404(Product, id=id, available=True)
+    products = Product.objects.filter(available=True)
+    cart = Cart(request)
+    cart.add(product=product,
+             quantity=1,
+             override_quantity=False)
+    return render(request,
+                  'ChocoStop/product/list.html',
+                  {'category': category,
+                   'categories': categories,
+                   'products': products})

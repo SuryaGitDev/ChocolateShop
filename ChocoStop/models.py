@@ -36,11 +36,13 @@ class Product(models.Model):
         return reverse('ChocoStop:product_detail',
                        args=[self.id, self.slug])
 
+    def get_absolute_url_for_cart(self):
+        return reverse('ChocoStop:product_add_to_cart',
+                       args=[self.id])
+
     def __str__(self):
         return self.name
 
     class Meta:
         ordering = ('name',)
         index_together = (('id', 'slug'),)
-
-
