@@ -46,3 +46,19 @@ def product_add_to_cart(request, id):
                   {'category': category,
                    'categories': categories,
                    'products': products})
+
+
+def product_add_to_cart_with_category(request, id, category_slug):
+    category = category_slug
+    categories = Category.objects.all()
+    product = get_object_or_404(Product, id=id, available=True)
+    products = Product.objects.filter(available=True)
+    cart = Cart(request)
+    cart.add(product=product,
+             quantity=1,
+             override_quantity=False)
+    return render(request,
+                  'ChocoStop/product/list.html',
+                  {'category': category,
+                   'categories': categories,
+                   'products': products})

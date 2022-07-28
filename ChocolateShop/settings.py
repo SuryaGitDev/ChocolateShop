@@ -28,6 +28,10 @@ SECRET_KEY = 'django-insecure-1kz%p9yrf#pm@#w-y64t9_r_gfd=qq$@hmj!ltr_8_ft+0z36u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -46,6 +50,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [

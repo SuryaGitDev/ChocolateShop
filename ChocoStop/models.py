@@ -40,6 +40,10 @@ class Product(models.Model):
         return reverse('ChocoStop:product_add_to_cart',
                        args=[self.id])
 
+    def get_absolute_url_for_cart_with_category(self):
+        return reverse('ChocoStop:product_add_to_cart_with_category',
+                       args=[self.id, self.category])
+
     def __str__(self):
         return self.name
 
